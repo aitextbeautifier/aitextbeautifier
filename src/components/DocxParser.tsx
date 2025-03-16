@@ -255,7 +255,7 @@ export const parseMarkdownToDocx = (
                 new TextRun({
                   text: codeLine,
                   font: "Courier New",
-                  size: 20,
+                  size: 15,
                   color: "1A1A1A",
                 }),
               ],
@@ -292,7 +292,7 @@ export const parseMarkdownToDocx = (
           border: {
             bottom: { style: BorderStyle.SINGLE, size: 1, color: "E0E0E0" },
           },
-          spacing: { before: 240, after: 240 },
+          spacing: { before: 50, after: 50 },
         })
       );
     } else if (line.startsWith("# ")) {
@@ -336,7 +336,7 @@ export const parseMarkdownToDocx = (
         new Paragraph({
           children: processInlineFormatting(line.replace("- ", "")),
           bullet: { level: 0 },
-          spacing: { before: 120, after: 120 },
+          spacing: { before: 50, after: 500 },
           indent: { left: 720, hanging: 360 },
         })
       );
